@@ -1,3 +1,0 @@
-#!/bin/bash
-
-g++ src/main.cc -I./src -o hyper -g3 &> err.c

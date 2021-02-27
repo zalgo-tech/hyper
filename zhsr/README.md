@@ -1,2 +1,0 @@
-# zhsr
-C++ software renderer
