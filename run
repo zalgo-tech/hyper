@@ -1,0 +1,10 @@
+#!/bin/bash
+
+./build
+
+if [[ "$?" == "0" ]]; then
+	echo "--- Build passed -> hyper ---"
+	./hyper
+else
+	echo "--- Build failed -> (err.c)  ---"
+fi

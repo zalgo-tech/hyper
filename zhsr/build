@@ -1,0 +1,27 @@
+#!/bin/bash
+
+target="test"
+flags="-lallegro -lallegro_main -lglfw -lGL -lX11 -lpthread -lXrandr -lXi -I./include -ldl -g3"
+output="zhsr"
+
+if [[ "$1" != "" ]]; then
+	target=$1
+	output=$1
+fi
+
+if [[ "$whoami" == "generic" ]]; then
+	g++ src/$target.cc $flags -o $output &> `whoami`err.cc
+else
+	g++ src/$target.cc $flags -o $output &> err.cc
+fi
+EXIT_CODE=$?
+
+if [[ "$EXIT_CODE" == "0" ]]; then
+	echo "-- Build success. --"
+else
+	echo "-- Build failure. --"
+fi
+
+if [[ "$(whoami)" == "generic" ]]; then
+	cat `whoami`err.cc
+fi

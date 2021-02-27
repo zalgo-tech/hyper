@@ -1,0 +1,25 @@
+ 
+ --- HYPER ---
+
+SYNOPSIS
+
+write stuff here
+
+DETAILS
+
+- cleanly integrate 2d and 3d scenes (ie drawing a 3d view into a portion of the window or using a 3d scene as a texture for a single face of another scene, etc)
+ - hyper games are written in simple c++ and compiled, allowing control over linking
+ - while there are abstractions and higher-level constructs to aid in programming, the engine overall will remain, at most, intermediate-level, and still mainly low-level
+ - hyper editor will function as a frontend to the main engine
+ - can be compiled independently or even integrated into other game engines
+
+
+EDITOR
+
+Because Hyper is designed to work as pure code, the editor will generate header files that integrate cleanly into the rest of the code, and remain out of the way of the user.
+
+Scene and resource files, instead of being stored in a plain-text, json, or similar format, will be written as direct API calls and organized automatically into header files. These header files are automatically included by the engine, so the only part the user needs to worry about is the initial include of the Hyper header file.
+
+Each scene and resource is stored as a header file with API calls that construct the given functionality directly through code. A large benefit of this is that all objects created via the editor can be referenced directly in the resulting code through variables.
+
+
