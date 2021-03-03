@@ -1,9 +1,0 @@
-cc_library(
-    name = "hyper_core",
-    srcs = [
-        "include/hyper.h",
-        "src/main.cc",
-    ],
-    includes = ["include/"],
-    hdrs = ["include/hyper.h"],
-)

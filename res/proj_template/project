@@ -1,8 +1,0 @@
-{
-	"name" : "project",
-	"root" : {
-		"class" : "node",
-		"name" : "thing",
-		"children" : []
-	}
-}

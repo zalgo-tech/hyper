@@ -1,9 +1,0 @@
-cc_library(
-    name = "hyper_renderer",
-    srcs = [
-        "include/renderer.h",
-        "src/renderer.cc",
-    ],
-    includes = ["include/"],
-    hdrs = ["include/renderer.h"],
-)
